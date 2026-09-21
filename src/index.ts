@@ -1,8 +1,10 @@
+import { init } from "./commands/init.js";
+
 const [, , command, ...args] = process.argv;
 
 switch (command) {
   case "init":
-    console.log("TODO: init");
+    init();
     break;
   default:
     console.error(`unknown command: ${command}`);
