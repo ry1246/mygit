@@ -3,6 +3,7 @@ import { hashObject } from "./commands/hashObject.js";
 import { catFile } from "./commands/catFile.js";
 import { writeTree } from "./commands/writeTree.js";
 import { lsTree } from "./commands/lsTree.js";
+import { commitTree } from "./commands/commitTree.js";
 
 const [, , command, ...args] = process.argv;
 
@@ -21,6 +22,9 @@ switch (command) {
     break;
   case "lsTree":
     lsTree(args);
+    break;
+  case "commitTree":
+    commitTree(args);
     break;
   default:
     console.error(`unknown command: ${command}`);
